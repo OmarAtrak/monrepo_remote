@@ -1,0 +1,7 @@
+Spring:
+  profiles:
+    active: local
+
+Logging:
+  level:
+    org: DEBUG
