@@ -1,6 +1,6 @@
 Spring:
   profiles:
-    active: local
+    active: quel
 
 Logging:
   level:
