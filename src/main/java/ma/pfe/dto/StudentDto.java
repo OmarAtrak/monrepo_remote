@@ -1,28 +1,51 @@
 package ma.pfe.dto;
 
+
+import ma.pfe.entities.StudentId;
+
+import java.util.List;
+
 public class StudentDto {
-    private long id;
-    private String name;
+    private StudentIdDTO idDTO;
+    private String nameDTO;
+    private List<CourseDTO> coursesDTO;
+    private AdresseDTO adresseDTO;
 
-    public long getId() {
-        return id;
+    public StudentIdDTO getIdDTO() {
+        return this.idDTO;
     }
-    public String getName() {
-        return name;
+    public String getNameDTO() {
+        return this.nameDTO;
+    }
+    public AdresseDTO getAdresseDTO() {
+        return this.adresseDTO;
+    }
+    public List<CourseDTO> getCoursesDTO(){
+        return this.coursesDTO;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setIdDTO(StudentIdDTO idDTO) {
+        this.idDTO.setId(idDTO.getId());
+        this.idDTO.setCode(idDTO.getCode());
+        this.idDTO.setAlias(idDTO.getAlias());
     }
-    public void setName(String name) {
-        this.name = name;
+    public void setNameDTO(String nameDTO) {
+        this.nameDTO = nameDTO;
+    }
+    public void setAdresseDTO(AdresseDTO adresseDTO) {
+        this.adresseDTO = adresseDTO;
+    }
+    public void setCourseDTO(List<CourseDTO> coursesDTO){
+        this.coursesDTO = coursesDTO;
     }
 
     @Override
     public String toString() {
         return "StudentDto{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
+                "idDTO=" + idDTO +
+                ", nameDTO='" + nameDTO + '\'' +
+                ", coursesDTO=" + coursesDTO +
+                ", adresseDTO=" + adresseDTO +
                 '}';
     }
 }

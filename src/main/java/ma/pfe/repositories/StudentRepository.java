@@ -1,12 +1,15 @@
 package ma.pfe.repositories;
 
 import ma.pfe.entities.StudentEntity;
+import ma.pfe.entities.StudentId;
 
 import java.util.List;
 
+
 public interface StudentRepository {
-    long create(StudentEntity e);
+    long save(StudentEntity e);
     boolean update(StudentEntity e);
-    boolean delete(long id);
-    List<StudentEntity> readAll();
+    boolean delete(StudentId id);
+    List<StudentEntity> selectAll();
+    StudentEntity findById(StudentId id);
 }

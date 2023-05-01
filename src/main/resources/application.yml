@@ -1,7 +1,7 @@
 Spring:
   profiles:
-    active: quel
+    active: local
 
-Logging:
-  level:
-    org: DEBUG
+#Logging:
+#  level:
+#    org: DEBUG
